@@ -10,4 +10,5 @@ before_install:
   - docker build -t src386/docker-sphinx .
 
 script:
+  - docker run --rm -ti src386/docker-sphinx python --version
   - docker run --rm -ti src386/docker-sphinx sphinx-apidoc --version
